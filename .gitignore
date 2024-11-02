@@ -1,6 +1,9 @@
 # Ignore everything
 *
 
-# Allow the docs folder
-!docs/*
-!.gitignore
+# Allow the docs directory and its contents
+!docs/
+!docs/**
+
+# Exclude specific files or directories in docs if needed
+# Example: !docs/images/
