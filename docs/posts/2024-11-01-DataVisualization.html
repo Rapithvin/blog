@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Data visualization</title>
+        <title>Damn Tested DeFi</title>
         <link rel="stylesheet" href="../css/default.css" />
     </head>
     <body>
@@ -15,16 +15,39 @@
         </header>
 
         <main role="main">
-            <h1>Data visualization</h1>
+            <h1>Damn Tested DeFi</h1>
             <article>
     <section class="header">
         Posted on November  1, 2024
         
             by Me.
         
+        
+            Part 0 of Damn Tested DeFi
+        
     </section>
     <section>
-        
+        <h2 id="introduction">Introduction</h2>
+<p>Welcome to this project, where we’re cutting through the fluff to find bugs without needing to know a single line of a system’s internals. The whole point is simple: define “what” systems should achieve, then let advanced testing methodologies tear through them to see if they hold up. This project builds on top of Damn Vulnerable DeFi, thanks to Tincho and his team. Massive shoutout to Tincho—he’s a true legend and deserves serious respect. Check out his <a href="https://www.damnvulnerabledefi.xyz/">Damn vulnerable Defi Repo</a>, <a href="https://blog.theredguild.org/author/tincho/">Blog</a>, or <a href="https://www.youtube.com/@watchtheredguild">YouTube</a> if you haven’t already.</p>
+<h2 id="objective">Objective</h2>
+<p>Our main goal? Prove that you can catch bugs by focusing purely on a system’s expected behavior—no need to understand every line of its code.</p>
+<h2 id="methodology">Methodology</h2>
+<p>We’re diving into property-based testing and formal verification. These techniques are powerhouses in their own right but take different approaches:</p>
+<ol type="1">
+<li><strong>Fuzzing</strong>: Think brute-force on steroids. It probes the entire state space, or close to it, using informed guesses that improve with each test. (I’m assuming you have a brain and are using a generator-shrinker, not just throwing dice)</li>
+<li><strong>Formal Verification (FV)</strong>: FV, on the other hand, uses hard math and logic to analyze both current and future states, giving a more structured insight.</li>
+</ol>
+<p>In simple terms, fuzzing is like building an ultra-detailed problem model to get a rough solution. Formal verification, on the other hand, involves creating an estimated model to derive a mathematically sound solution—even if that model isn’t perfect. (Why isn’t it perfect? Because modeling your protocol in exact specifications isn’t possible. And if you think it is, you’re delusional.)</p>
+<h2 id="tools-and-preferences">Tools and Preferences</h2>
+<p>I’ve worked with tools like Foundry, Echidna, Medusa, Certora, and TLA+ for formal verification. But here, we’ll focus on Echidna. Why?</p>
+<ol type="1">
+<li><strong>Community and Reliability</strong>: Echidna’s community is strong, and it’s proven itself time and again.</li>
+<li><strong>Mathematical Affinity</strong>: For math fans, Echidna’s approach fits nicely as it starts from a simple point like an EOA.</li>
+<li><strong>Logical Design</strong>: Designing intermediate contracts for Echidna tests aligns with a mathematically rigorous mindset.</li>
+</ol>
+<h3 id="notes">Notes</h3>
+<p>Each challenge folder contains a <code>Note.md</code> which includes all of my notes and explanations for the design of tests and my thought process. I really like to cover them in a YouTube video, but I’m not sure if it’s possible for me based on my schedule or not. However, you can reach me directly if you have any questions.</p>
+<p>Join us as we take formal verification and property-based testing to new heights in bug detection while pushing back against the status quo. Let’s get started.</p>
     </section>
 </article>
 
